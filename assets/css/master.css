@@ -4,6 +4,10 @@ body {
   font: 18px Helvetica;
   text-align: center;
 }
+a:active, button:active, button:focus, a:focus {
+  outline: none;
+  box-shadow: insert 0 0 5px #333;
+  }
 
 .button-action, button.action, .button-warning, button.warning {
   -webkit-border-radius: 20px;
