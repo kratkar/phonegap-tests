@@ -2,7 +2,8 @@ x$(document).on('deviceready', function () {
   var file = '/record1.mp3', timeoutId;
   var mediaObject = new Media(file, function () {
         console.log('record complete')
-        x$('#recordLog').html('Record complete')
+        x$('#recordLog').html('record complete')
+        x$('#playActionFileName').html('File: ' + file)
         x$('#playActions').css({ 'display' : 'block' })
       }, function () {
         console.log('record error')

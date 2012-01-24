@@ -6,7 +6,11 @@ body {
 }
 a:active, button:active, button:focus, a:focus {
   outline: none;
-  box-shadow: insert 0 0 5px #333;
+  box-shadow: insert 0 0 10px #333;
+  -webkit-box-shadow: insert 0 0 10px #333;
+  }
+a:hover, button:hover {
+  -webkit-box-shadow: insert 0 0 5px #666;
   }
 
 .button-action, button.action, .button-warning, button.warning {
@@ -24,15 +28,15 @@ a:active, button:active, button:focus, a:focus {
   text-align: center;
 }
 .button-action, button.action {
-  background:#F7941E;
-  background: -webkit-gradient(linear, 0 0, 0 70%, from(#F7941E), to(#D37F18));
-  background: linear-gradient(#F7941E, #D37F18 70%);
-  border: 1px solid #C97917;
-  text-shadow: 0 -1px 0 #7E4B0D;
-  color:#fff;
+  background: #008800;
+  background: -webkit-gradient(linear, 0 0, 0 70%, from(#8ECF8E), to(#008800));
+  background: linear-gradient(#8ECF8E, #008800 70%);
+  border: 1px solid #003f00;
+  text-shadow: 0 -1px 0 #003f00;
+  color: #fff;
   }
 .button-warning, button.warning {
-  background:#ff0f0f;
+  background: #ff0f0f;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(#ff6f6f), to(#ff0f0f));
   background: linear-gradient(#ff6f6f, #ff0f0f 70%);
   border: 1px solid #ff0000;
