@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 
-.button-action, button.action, .button-warning, button.warning{
+.button-action, button.action, .button-warning, button.warning {
   -webkit-border-radius: 20px;
   border-radius: 20px;
   display: inline-block;
