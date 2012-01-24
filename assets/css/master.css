@@ -1,0 +1,42 @@
+body {
+  background: #fff;
+  margin: 0;
+  font: 18px Helvetica;
+  text-align: center;
+}
+
+.app_button, button {
+  -webkit-border-radius: 20px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  width: 200px;
+  background:#F7941E;
+  background: -webkit-gradient(linear, 0 0, 0 70%, from(#F7941E), to(#D37F18));
+  background: linear-gradient(#F7941E, #D37F18 70%);
+  border: 1px solid #C97917;
+  font-size: 18px;
+  font-weight: 200;
+  text-shadow: 0 -1px 0 #7E4B0D;
+  height: 40px;
+  line-height: 40px;
+  color:#fff;
+  text-align: center;
+}
+
+legend {
+  font-weight: bold;
+  text-shadow: 0 1px 0 #fff;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input {
+  margin-bottom: 8px;
+}
