@@ -35,11 +35,12 @@ x$(document).on('deviceready', function () {
       $t.attr('data-action', 'stop')
     }
     else {
-      console.log('play')
+      console.log('stop')
       mediaObject.stop()
       $t.attr('data-action', 'play')
     }
     var textButton = $t.attr('data-text'+action)
-    x$(this).html(textButton);
+    $t.html(textButton);
+    console.log(textButton)
   })
 }, false)
