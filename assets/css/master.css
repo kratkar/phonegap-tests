@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 a:active, button:active, button:focus, a:focus {
-  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   }
 
 .button-action, button.action, .button-warning, button.warning {
@@ -21,8 +21,8 @@ a:active, button:active, button:focus, a:focus {
   background: #008800;
   background: -webkit-gradient(linear, 0 0, 0 70%, from(#8ECF8E), to(#008800));
   background: linear-gradient(#8ECF8E, #008800 70%);
-  border: 1px solid #003f00;
-  text-shadow: 0 -1px 0 #003f00;
+  border: 1px solid #015F00;
+  text-shadow: 0 -1px 0 #015F00;
   color: #fff;
   }
 .button-action:active, button.action:active {
