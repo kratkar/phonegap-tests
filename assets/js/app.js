@@ -1,6 +1,6 @@
 x$(document).on('deviceready', function () {
 
-  var file = x$('#recordFileName')[0].value, timeoutId;
+  var file, timeoutId;
   console.log('file = ' + file)
   var mediaObject = new Media(file, function () {
         //console.log('record complete')
@@ -14,6 +14,7 @@ x$(document).on('deviceready', function () {
   }), playObject;
 
   x$('#recordStart').on('touchstart', function () {
+    file = x$('#recordFileName')[0].value
     x$('#recordLog').html('Start recording(10 sec. maximum)')
     //console.log('Record start')
     mediaObject.startRecord();
