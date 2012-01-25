@@ -1,19 +1,20 @@
 x$(document).on('deviceready', function () {
 
   var file, timeoutId;
-  var mediaObject = new Media(file, function () {
-        //console.log('record complete')
-        x$('#recordLog').html('record complete')
-        x$('#playActionFileName').html('File: ' + file)
-        x$('#playActions').css({ 'display' : 'block' })
-      }, function () {
-        //console.log('record error')
-        x$('#recordLog').html('Record error')
-  }), playObject;
+  var mediaObject, playObject;
 
   x$('#recordStart').on('touchstart', function () {
     file = x$('#recordFileName')[0].value
     console.log('file = ' + file)
+    mediaObject = new Media(file, function () {
+      //console.log('record complete')
+      x$('#recordLog').html('record complete')
+      x$('#playActionFileName').html('File: ' + file)
+      x$('#playActions').css({ 'display' : 'block' })
+    }, function () {
+      //console.log('record error')
+      x$('#recordLog').html('Record error')
+    });
     x$('#recordLog').html('Start recording ' + file + '(10 sec. maximum)')
     //console.log('Record start')
     mediaObject.startRecord();
@@ -34,6 +35,7 @@ x$(document).on('deviceready', function () {
 
   x$('#recordPlay').on('touchstart', function () {
     var $t = x$(this), action = $t.attr('data-action');
+    console.log('play file = ' + file)
     playObject = new Media(file, function () {
       var $t = x$('#recordPlay');
       $t.attr('data-action', 'play')
