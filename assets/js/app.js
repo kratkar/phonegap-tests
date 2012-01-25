@@ -1,6 +1,6 @@
 x$(document).on('deviceready', function () {
 
-  var file = $('#recordFileName')[0].value, timeoutId;
+  var file = x$('#recordFileName')[0].value, timeoutId;
   var mediaObject = new Media(file, function () {
         console.log('record complete')
         x$('#recordLog').html('record complete')
