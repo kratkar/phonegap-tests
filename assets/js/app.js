@@ -35,8 +35,13 @@ x$(document).on('deviceready', function () {
   x$('#recordPlay').on('touchstart', function () {
     var $t = x$(this), action = $t.attr('data-action');
     playObject = new Media(file, function () {
+      var $t = x$('#recordPlay');
+      $t.attr('data-action', 'play')
+      var textButton = $t.attr('data-textplay')
+      $t.html(textButton);
     }, function () {
       x$('#playActions').css({ 'display' : 'none' })
+      console.log('Play error')
     })
     if (action == 'play') {
       playObject.play()
