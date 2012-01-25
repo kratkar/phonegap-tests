@@ -14,7 +14,7 @@ x$(document).on('deviceready', function () {
   x$('#recordStart').on('touchstart', function () {
     file = x$('#recordFileName')[0].value
     console.log('file = ' + file)
-    x$('#recordLog').html('Start recording(10 sec. maximum)')
+    x$('#recordLog').html('Start recording ' + file + '(10 sec. maximum)')
     //console.log('Record start')
     mediaObject.startRecord();
     //console.log('mediaObject.startRecord', m)
@@ -38,7 +38,7 @@ x$(document).on('deviceready', function () {
       var $t = x$('#recordPlay');
       $t.attr('data-action', 'play')
       var textButton = $t.attr('data-textplay')
-      $t.html(textButton);
+      $t.html('inner', textButton);
     }, function () {
       x$('#playActions').css({ 'display' : 'none' })
       console.log('Play error')
