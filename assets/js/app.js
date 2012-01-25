@@ -4,6 +4,7 @@ x$(document).on('deviceready', function () {
   var mediaObject = new Media(file, function () {
         //console.log('record complete')
         x$('#recordLog').html('record complete')
+        x$('#playActions').css({ 'display' : 'block' })
       }, function () {
         //console.log('record error')
         x$('#recordLog').html('Record error')
@@ -34,7 +35,6 @@ x$(document).on('deviceready', function () {
     var $t = x$(this), action = $t.attr('data-action');
     playObject = new Media(file, function () {
       x$('#playActionFileName').html('File: ' + file)
-      x$('#playActions').css({ 'display' : 'block' })
     }, function () {
       x$('#playActions').css({ 'display' : 'none' })
     })
